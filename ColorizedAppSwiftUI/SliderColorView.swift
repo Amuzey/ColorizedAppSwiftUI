@@ -10,7 +10,11 @@ import SwiftUI
 struct SliderColorView: View {
     
     @Binding var value: Double
+    @Binding var text: String
+    
+    
     let color: Color
+    
     
     var body: some View {
         HStack {
@@ -19,12 +23,15 @@ struct SliderColorView: View {
                 .frame(width: 40, height: 35)
             Slider(value: $value, in: 0...255, step: 1)
                 .accentColor(color)
+            TextField("", text: $text)
+                .frame(width: 55)
+                .textFieldStyle(.roundedBorder)
         }
     }
 }
 
 struct SliderColorView_Previews: PreviewProvider {
     static var previews: some View {
-        SliderColorView(value: .constant(0.5), color: .red)
+        SliderColorView(value: .constant(0.5), text: .constant(""), color: .red)
     }
 }

@@ -17,19 +17,25 @@ struct ContentView: View {
     @State private var greenSliderValue = Double.random(in: 0...255)
     @State private var blueSliderValue = Double.random(in: 0...255)
     
-    
+    @State private var redSliderText = ""
+    @State private var greenSliderText = ""
+    @State private var blueSliderText = ""
+
     var body: some View {
         ZStack {
             Color(red: 61 / 255, green: 105 / 255, blue: 183 / 255)
                 .ignoresSafeArea()
             VStack {
-                Color(red: redSliderValue / 255, green: greenSliderValue / 255, blue: blueSliderValue / 255)
+                Color(red: redSliderValue / 255,
+                      green: greenSliderValue / 255,
+                      blue: blueSliderValue / 255)
                     .frame(width: 350, height: 150)
                     .cornerRadius(20)
-                    .overlay(RoundedRectangle(cornerRadius: 20).stroke(Color.white, lineWidth: 4))
-                SliderColorView(value: $redSliderValue, color: .red)
-                SliderColorView(value: $greenSliderValue, color: .green)
-                SliderColorView(value: $blueSliderValue, color: .blue)
+                    .overlay(RoundedRectangle(cornerRadius: 20)
+                        .stroke(Color.white, lineWidth: 4))
+                SliderColorView(value: $redSliderValue, text: $redSliderText, color: .red)
+                SliderColorView(value: $greenSliderValue, text: $greenSliderText, color: .green)
+                SliderColorView(value: $blueSliderValue, text: $blueSliderText, color: .blue)
                 Spacer()
                 
             }
