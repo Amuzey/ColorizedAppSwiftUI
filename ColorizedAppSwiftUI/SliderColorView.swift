@@ -28,14 +28,9 @@ struct SliderColorView: View {
                 .textFieldStyle(.roundedBorder)
                 .toolbar {
                     ToolbarItemGroup(placement: .keyboard) {
-                        Button("Click ME") {
-                            print("qwe")
-                        }
+                        Button("Click ME") { }
                     }
-                    
                 }
-                .keyboardType(.decimalPad)
-                
         }
     }
 }

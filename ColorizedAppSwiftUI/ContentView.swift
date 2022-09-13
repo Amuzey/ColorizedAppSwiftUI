@@ -25,7 +25,7 @@ struct ContentView: View {
         ZStack {
             Color(red: 61 / 255, green: 105 / 255, blue: 183 / 255)
                 .ignoresSafeArea()
-            VStack {
+            VStack(spacing: 20){
                 Color(red: redSliderValue / 255,
                       green: greenSliderValue / 255,
                       blue: blueSliderValue / 255)
@@ -33,6 +33,7 @@ struct ContentView: View {
                     .cornerRadius(20)
                     .overlay(RoundedRectangle(cornerRadius: 20)
                         .stroke(Color.white, lineWidth: 4))
+                
                 SliderColorView(value: $redSliderValue, text: $redSliderText, color: .red)
                 SliderColorView(value: $greenSliderValue, text: $greenSliderText, color: .green)
                 SliderColorView(value: $blueSliderValue, text: $blueSliderText, color: .blue)
