@@ -26,6 +26,16 @@ struct SliderColorView: View {
             TextField("", text: $text)
                 .frame(width: 55)
                 .textFieldStyle(.roundedBorder)
+                .toolbar {
+                    ToolbarItemGroup(placement: .keyboard) {
+                        Button("Click ME") {
+                            print("qwe")
+                        }
+                    }
+                    
+                }
+                .keyboardType(.decimalPad)
+                
         }
     }
 }
