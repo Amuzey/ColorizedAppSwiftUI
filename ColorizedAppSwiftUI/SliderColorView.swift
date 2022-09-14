@@ -22,13 +22,14 @@ struct SliderColorView: View {
                 .foregroundColor(.white)
                 .frame(width: 40, height: 35)
             Slider(value: $value, in: 0...255, step: 1)
-                .accentColor(color)
+                .tint(color)
             TextField("", text: $text)
                 .frame(width: 55)
                 .textFieldStyle(.roundedBorder)
                 .toolbar {
                     ToolbarItemGroup(placement: .keyboard) {
-                        Button("Click ME") { }
+                        Spacer()
+                        Button("Done") { }
                     }
                 }
         }
