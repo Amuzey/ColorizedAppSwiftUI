@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8A71D1B128D32C71009C7DCA /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A71D1B028D32C71009C7DCA /* TextFieldView.swift */; };
 		8AA17D6B28D1EF8D008AE3E1 /* ColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA17D6A28D1EF8D008AE3E1 /* ColorView.swift */; };
 		8AE52EE928CF446900F8700D /* ColorizedAppSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE52EE828CF446900F8700D /* ColorizedAppSwiftUIApp.swift */; };
 		8AE52EEB28CF446900F8700D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE52EEA28CF446900F8700D /* ContentView.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8A71D1B028D32C71009C7DCA /* TextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
 		8AA17D6A28D1EF8D008AE3E1 /* ColorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorView.swift; sourceTree = "<group>"; };
 		8AE52EE528CF446900F8700D /* ColorizedAppSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColorizedAppSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AE52EE828CF446900F8700D /* ColorizedAppSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorizedAppSwiftUIApp.swift; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 				8AE52EE828CF446900F8700D /* ColorizedAppSwiftUIApp.swift */,
 				8AE52EEA28CF446900F8700D /* ContentView.swift */,
 				8AA17D6A28D1EF8D008AE3E1 /* ColorView.swift */,
+				8A71D1B028D32C71009C7DCA /* TextFieldView.swift */,
 				8AE52EF828CF4A7200F8700D /* SliderColorView.swift */,
 				8AE52EEC28CF446C00F8700D /* Assets.xcassets */,
 				8AE52EEE28CF446C00F8700D /* Preview Content */,
@@ -144,6 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8AA17D6B28D1EF8D008AE3E1 /* ColorView.swift in Sources */,
+				8A71D1B128D32C71009C7DCA /* TextFieldView.swift in Sources */,
 				8AE52EF928CF4A7200F8700D /* SliderColorView.swift in Sources */,
 				8AE52EEB28CF446900F8700D /* ContentView.swift in Sources */,
 				8AE52EE928CF446900F8700D /* ColorizedAppSwiftUIApp.swift in Sources */,

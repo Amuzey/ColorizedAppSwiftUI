@@ -9,26 +9,39 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State private var redSliderValue = Double.random(in: 0...255)
-    @State private var greenSliderValue = Double.random(in: 0...255)
-    @State private var blueSliderValue = Double.random(in: 0...255)
+    @State private var red = Double.random(in: 0...255).rounded()
+    @State private var green = Double.random(in: 0...255).rounded()
+    @State private var blue = Double.random(in: 0...255).rounded()
     
-    @State private var redSliderText = ""
-    @State private var greenSliderText = ""
-    @State private var blueSliderText = ""
+    @FocusState var isInputActive: Bool
     
     var body: some View {
         ZStack {
             Color(red: 61 / 255, green: 105 / 255, blue: 183 / 255)
                 .ignoresSafeArea()
-            VStack(spacing: 20){
-                ColorView(red: $redSliderValue, green: $greenSliderValue, blue: $blueSliderValue)
+                .onTapGesture {
+                    isInputActive = false
+                }
+            
+            VStack(spacing: 40){
+                ColorView(red: red, green: green, blue: blue)
                 
-                SliderColorView(value: $redSliderValue, text: $redSliderText, color: .red)
-                SliderColorView(value: $greenSliderValue, text: $greenSliderText, color: .green)
-                SliderColorView(value: $blueSliderValue, text: $blueSliderText, color: .blue)
+                VStack {
+                    SliderColorView(value: $red, color: .red)
+                    SliderColorView(value: $green, color: .green)
+                    SliderColorView(value: $blue, color: .blue)
+                }
+                .frame(height: 150)
+                .focused($isInputActive)
+                .toolbar {
+                    ToolbarItemGroup(placement: .keyboard) {
+                        Spacer()
+                        Button("Done") {
+                            isInputActive = false
+                        }
+                    }
+                }
                 Spacer()
-                
             }
             .padding()
         }

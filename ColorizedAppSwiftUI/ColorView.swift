@@ -9,9 +9,9 @@ import SwiftUI
 
 struct ColorView: View {
     
-    @Binding var red: Double
-    @Binding var green: Double
-    @Binding var blue: Double
+    var red: Double
+    var green: Double
+    var blue: Double
     
     var body: some View {
         Color(red: red / 255,
@@ -26,6 +26,6 @@ struct ColorView: View {
 
 struct ColorView_Previews: PreviewProvider {
     static var previews: some View {
-        ColorView(red: .constant(0.5), green: .constant(0.5), blue: .constant(0.5))
+        ColorView(red: 100, green: 200, blue: 255)
     }
 }
